@@ -443,12 +443,15 @@ footer i {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 895px) {
+  html{
+    font-size: 61%;
+  }
   .social-1 a,
   .social-2 a,
   .social-3 a,
   .social-4 a,
   .social-5 a {
-    width: 40%;
+    width: 30%;
   }
 }
