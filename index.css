@@ -15,12 +15,12 @@ html {
   --bg-maniac-color: #ffeb00;
 }
 body {
-  background-image: url("/bg.jpg");
-  background-position: center;
+  background-image: url("/A.jpg");
+  background-position: left;
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   color: #ffff;
 }
 li {
@@ -29,9 +29,7 @@ li {
 .dropdown-content {
   display: none;
   position: absolute;
-  /* background-color: #333; */
   background-color: var(--bg-color);
-
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -53,7 +51,7 @@ li {
 }
 
 .dropdown-content a:hover {
-  background-color: #555;
+  background-color: #333;
   transform: scale(1.1);
 }
 .dropdown:hover .dropdown-content {
@@ -86,7 +84,7 @@ li {
 .dropdown-content .fb:hover {
   color: #0d92f4;
 }
-.dropdown-content .yt {
+.dropdown-content .yt:hover {
   color: #e52020;
 }
 .dropdown-content .loc:hover {
@@ -112,7 +110,7 @@ section .navbar {
 }
 .navbar .left h1 span {
   color: var(--bg-maniac-color);
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .navbar .right {
   display: flex;
@@ -124,7 +122,6 @@ section .navbar {
   font-size: 25px;
   color: var(--bg-maniac-color);
   transition: 0.3s ease;
-  /* animation: putar 5s infinite linear; */
 }
 @keyframes putar {
   0% {
@@ -170,15 +167,13 @@ section .card {
   width: 200px;
   border-radius: 50%;
   transition: 0.3s ease;
-  /* mask-image: url("/312092.svg");
-  mask-position: center;
-  mask-repeat: no-repeat;
-  mask-size: 100%; */
+  filter: blur(1.4px);
 }
 .photo img:hover {
   box-shadow: 0 0 20px var(--bg-color);
   transform: scale(1.1);
   cursor: pointer;
+  filter: none;
 }
 .card .name {
   min-height: 70px;
@@ -198,19 +193,22 @@ section .card {
   width: 25px;
   height: 25px;
 }
-.card .txt h3 {
-  text-align: center;
-  color: #fff;
-  font-weight: bold;
-  font-size: 14px;
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: 0.3s ease;
-  border-right: 3px solid #fff;
-  animation: typing 3s steps(36, end) infinite, blink 0.75s step-end infinite;
+.card .inconsProfile {
+  display: flex;
+  width: 60%;
+  min-height: 30px;
+  font-size: 35px;
+  justify-content: center;
+  gap: 15px;
 }
-
+.inconsProfile i {
+  transition: 0.3s ease;
+}
+.inconsProfile i:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+  text-shadow: 0 0 50px, 0 0 60px #333;
+}
 @keyframes typing {
   0% {
     width: 0;
@@ -444,8 +442,11 @@ footer i {
 }
 
 @media (max-width: 895px) {
-  html{
+  html {
     font-size: 61%;
+  }
+  body {
+    height: 100%;
   }
   .social-1 a,
   .social-2 a,
