@@ -15,7 +15,7 @@ html {
   --bg-maniac-color: #ffeb00;
 }
 body {
-  background-image: url("/A.jpg");
+  background-image: url("1.jpg");
   background-position: left;
   object-fit: cover;
   background-repeat: no-repeat;
@@ -103,6 +103,7 @@ section .navbar {
   background-color: var(--bg-color);
   color: #fff;
   transition: 0.3s ease;
+  
 }
 .navbar .left {
   transition: 0.3s ease;
